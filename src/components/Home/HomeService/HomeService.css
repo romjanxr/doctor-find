@@ -1,0 +1,18 @@
+.up-title {
+    color: #00acb1;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.section-title {
+    color: #005963;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+@media only screen and (max-width: 576px){
+    .section-title{
+        font-size: 40px;
+    }
+}

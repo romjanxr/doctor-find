@@ -1,6 +1,7 @@
 .banner {
     background: url(../../../images/banner1.jpg) rgba(0, 89, 99, .6);
     background-size:cover;
+    background-position: center;
     background-blend-mode: multiply;
     height: 100vh;
     display: flex;
@@ -24,4 +25,39 @@
     box-shadow: 0 3px 24px rgb(0 0 0 / 10%);
     margin-top: 10px;
     display: inline-block;
+    transition: .3s;
+}
+
+.btn-regular:hover {
+    background-color: #005963;
+}
+
+.btn-read {
+    padding: 17px 30px;
+    background-color: white;
+    color: #005963;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    border-radius: 7px;
+    box-shadow: 0 3px 24px rgb(0 0 0 / 10%);
+    margin-top: 10px;
+    display: inline-block;
+    transition: .3s;
+}
+
+.btn-read:hover {
+    background-color: lightgray;
+}
+
+@media only screen and (max-width: 576px) {
+    .title {
+        font-size: 35px;
+    }
+    .banner{
+        height: 70vh;
+    }
+    .btn-regular, .btn-read {
+        padding: 12px 18px;
+    }
 }

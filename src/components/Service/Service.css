@@ -3,3 +3,30 @@
     font-size: 20px;
     font-weight: 600;
 }
+
+.service-card {
+    border: 2px solid #ebf2f3;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.read-more a{
+    text-decoration: none;
+    color: #00acb1;
+    font-weight: bolder;
+}
+
+.read-more a:hover {
+    color: rgb(0, 113, 118);
+}
+
+.read-more-text {
+    transition: 0.3s;
+}
+
+.read-more-text:hover {
+    margin-right: 5px;
+}
