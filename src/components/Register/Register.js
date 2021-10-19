@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
@@ -6,6 +6,7 @@ import './Register.css'
 
 const Register = () => {
     const { signInUsingGoogle, registerNewUser, setIsLoading, setUserName } = useAuth();
+    const [error, setError] = useState('');
     const location = useLocation();
     const history = useHistory();
     const redirect_url = location.state?.from || '/home';
@@ -26,6 +27,9 @@ const Register = () => {
                 setUserName(data.Name);
                 history.push(redirect_url);
             })
+            .catch(error => {
+                setError(error.message);
+            })
             .finally(() => setIsLoading(false));
     }
 
@@ -42,6 +46,7 @@ const Register = () => {
 
                     <input type="password" placeholder="Your Password" {...register("Password", { required: true, maxLength: 20 })} />
                     {errors.Password?.type === 'required' && <span className="text-danger">Password is required</span>}
+                    <p className="text-danger">{error}</p>
 
                     <input type="submit" className="btn-regular" value="Create an account" />
                 </form>

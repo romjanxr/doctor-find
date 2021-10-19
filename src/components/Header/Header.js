@@ -11,18 +11,21 @@ const Header = () => {
         <>
             <Navbar collapseOnSelect expand="lg" className="header" variant="light" sticky="top">
                 <Container>
-                    <Navbar.Brand href="#home"><img width="150px" src={logo} alt="docfind" /></Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/"><img width="150px" src={logo} alt="docfind" /></Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end link">
                         <Nav.Link as={Link} to="/">Home</Nav.Link>
                         <Nav.Link as={Link} to="/services">Services</Nav.Link>
                         {
-                            user?.email ? <div>
-                                <span className="text-light">Welcome: {user.displayName}</span>
+                            user?.email ? <>
+                                <span className="text-light">Sign In as: {user.displayName}</span>
                                 <Button className="btn btn-light ms-3" size="sm" onClick={logOut}>Log Out</Button>
-                            </div>
+                            </>
                                 :
-                                <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                                <>
+                                    <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                                    <Button className="btn-signup" variant="danger" as={Link} to="/register">Sign Up</Button>
+                                </>
                         }
                     </Navbar.Collapse>
                 </Container>

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
     const { setIsLoading, signInUsingGoogle, handleUserLogin } = useAuth();
+    const [error, setError] = useState('');
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => handlePasswordLogin(data);
     const location = useLocation();
@@ -26,6 +27,9 @@ const Login = () => {
             .then(() => {
                 history.push(redirect_url);
             })
+            .catch(error => {
+                setError(error.message);
+            })
             .finally(() => setIsLoading(false));
     }
 
@@ -39,8 +43,9 @@ const Login = () => {
 
                     <input type="password" placeholder="Your Password" {...register("Password", { required: true, maxLength: 20 })} />
                     {errors.Password?.type === 'required' && <span className="text-danger">Password is required</span>}
+                    <p className="text-danger">{error}</p>
 
-                    <input type="submit" className="btn-regular" value="Create an account" />
+                    <input type="submit" className="btn-regular" value="Login" />
                 </form>
                 <Link to="/register" className="text-danger" style={{ textDecoration: "none" }}>Need An Account?</Link>
                 <hr width="300px" />

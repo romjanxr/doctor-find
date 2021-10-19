@@ -2,7 +2,7 @@
     background-color: #005963;
 }
 
-/* .link a {
+.link a {
     color: white;
     font-weight: 500;
     font-size: 18px;
@@ -14,5 +14,9 @@
 .link a:active {
     color: white;
     border-bottom: 2px solid white;
-} */
+}
+
+.btn-signup {
+    border-radius: 15px;
+}
 
