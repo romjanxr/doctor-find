@@ -9,19 +9,19 @@ const Doctors = ({ doctor }) => {
             <Card className="service-card">
                 <Card.Img variant="top" src={img} />
                 <Card.Body className="py-5 px-3">
-                    <Card.Title className="service-title">{title}</Card.Title>
-                    <Card.Text>
+                    <Card.Body>
+                        <Card.Title className="service-title">{title}</Card.Title>
                         <div className="text-warning">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
+                            <i className="fas fa-star"></i>
                             <span className="ms-2 text-dark">(5)</span>
                         </div>
                         <h3 className="designation">{designation}</h3>
-                        <p className="mt-2"><i class="fas fa-map-marker-alt location-icon"></i> {location}</p>
-                    </Card.Text>
+                        <span className="mt-2"><i className="fas fa-map-marker-alt location-icon"></i> {location}</span>
+                    </Card.Body>
                 </Card.Body>
             </Card>
         </Col>

@@ -9,11 +9,8 @@ const ServiceDetail = () => {
     const [service, setService] = useState({});
     const history = useHistory();
 
-    console.log(services);
-
     useEffect(() => {
         const foundService = services?.find(service => service.id === parseInt(serviceId));
-        console.log(foundService)
         setService(foundService);
     }, [services]);
 
