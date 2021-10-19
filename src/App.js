@@ -1,9 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import AboutUs from './components/AboutUs/AboutUs';
+import DoctorsList from './components/DoctorsList/DoctorsList';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home/Home';
 import Login from './components/Login/Login';
+import NotFound from './components/NotFound/NotFound';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Register from './components/Register/Register';
 import ServiceDetail from './components/ServiceDetail/ServiceDetail';
@@ -36,7 +40,17 @@ function App() {
             <Route path="/login">
               <Login />
             </Route>
+            <Route path="/about">
+              <AboutUs />
+            </Route>
+            <Route path="/doctors">
+              <DoctorsList />
+            </Route>
+            <Route path="*">
+              <NotFound />
+            </Route>
           </Switch>
+          <Footer />
         </Router>
       </ServiceProvider>
     </AuthProvider>

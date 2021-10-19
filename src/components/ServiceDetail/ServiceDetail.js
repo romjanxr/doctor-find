@@ -8,8 +8,11 @@ const ServiceDetail = () => {
     const [services] = useServiceData();
     const [service, setService] = useState({});
 
+    console.log(services);
+
     useEffect(() => {
-        const foundService = services.find(service => service.id === parseInt(serviceId));
+        const foundService = services?.find(service => service.id === parseInt(serviceId));
+        console.log(foundService)
         setService(foundService);
     }, [services]);
 

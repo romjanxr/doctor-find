@@ -1,0 +1,15 @@
+/* .about-section {
+    background-color:rgba(0, 89, 99, 1);
+    background-size:cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.about-description {
+    font-size: 18px;
+    color: #686a6f;
+    line-height: 30px;
+}
