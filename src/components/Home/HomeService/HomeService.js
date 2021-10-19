@@ -5,7 +5,7 @@ import Service from '../../Service/Service';
 import './HomeService.css'
 
 const HomeService = () => {
-    const { services } = useServiceData();
+    const [services] = useServiceData();
     return (
         <div className="w-75 mx-auto my-5">
             <div className="text-center mt-5">

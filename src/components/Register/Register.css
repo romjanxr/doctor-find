@@ -1,0 +1,32 @@
+.register input {
+    display: block;
+    margin-bottom: 10px;
+    width: 300px;
+    padding: 7px 5px;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.google-btn {
+    padding: 5px;
+    border-radius: 15px;
+    width: 300px;
+    background-color: white;
+    outline: none;
+    border: 1px solid gray;
+}
+
+.google-btn svg {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* @media only screen and (max-width: 576px) {
+    .register input {
+        width: 150px;
+    }
+    .google-btn {
+        width: 150px;
+    }
+} */

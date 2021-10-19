@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { ServiceContext } from "../contexts/useFetch"
+import { ServiceContext } from "../contexts/ServiceProvider"
 
 const useServiceData = () => {
     return useContext(ServiceContext);

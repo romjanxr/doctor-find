@@ -1,10 +1,12 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import logo from '../../images/logo.png'
 import './Header.css'
 
 const Header = () => {
+    const { user, logOut } = useAuth();
     return (
         <>
             <Navbar collapseOnSelect expand="lg" className="header" variant="light" sticky="top">
@@ -14,10 +16,14 @@ const Header = () => {
                     <Navbar.Collapse className="justify-content-end link">
                         <Nav.Link as={Link} to="/">Home</Nav.Link>
                         <Nav.Link as={Link} to="/services">Services</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
-                        <Navbar.Text className="link">
-                            Signed in as: <a href="#login">Mark Otto</a>
-                        </Navbar.Text>
+                        {
+                            user?.email ? <div>
+                                <span className="text-light">Welcome: {user.displayName}</span>
+                                <Button className="btn btn-light ms-3" size="sm" onClick={logOut}>Log Out</Button>
+                            </div>
+                                :
+                                <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                        }
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

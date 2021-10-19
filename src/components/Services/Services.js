@@ -4,8 +4,7 @@ import useServiceData from '../../hooks/useServiceData';
 import Service from '../Service/Service';
 
 const Services = () => {
-    const { services } = useServiceData();
-    console.log(services);
+    const [services] = useServiceData();
     return (
         <div className="w-75 mx-auto my-5">
             <div className="text-center mt-5">
