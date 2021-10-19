@@ -34,7 +34,7 @@ const Login = () => {
     }
 
     return (
-        <div className="register w-50 mx-auto mt-5">
+        <div className="register w-50 mx-auto my-5">
             <div>
                 <h2>Please Login</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
