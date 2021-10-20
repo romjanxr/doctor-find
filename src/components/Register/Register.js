@@ -26,6 +26,7 @@ const Register = () => {
             .then(() => {
                 setUserName(data.Name);
                 history.push(redirect_url);
+                window.location.reload();
             })
             .catch(error => {
                 setError(error.message);

@@ -18,6 +18,7 @@ const Header = () => {
                         <Nav.Link as={Link} to="/services">Services</Nav.Link>
                         <Nav.Link as={Link} to="/doctors">Our Doctors</Nav.Link>
                         <Nav.Link as={Link} to="/about">About Us</Nav.Link>
+                        <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
                         {
                             user?.email ? <>
                                 <span className="text-light">Sign In as: {user.displayName}</span>

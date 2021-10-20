@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AboutUs from './components/AboutUs/AboutUs';
 import Appointment from './components/Appointment/Appointment';
+import ContactUs from './components/ContactUs/ContactUs';
 import DoctorsList from './components/DoctorsList/DoctorsList';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
@@ -41,6 +42,9 @@ function App() {
             <Route exact path="/services">
               <Services />
             </Route>
+            <PrivateRoute exact path="/contact">
+              <ContactUs />
+            </PrivateRoute>
             <PrivateRoute path="/services/:serviceId">
               <ServiceDetail />
             </PrivateRoute>

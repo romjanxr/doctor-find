@@ -1,0 +1,6 @@
+.pattern-bg {
+    background-image: url(../../images/pattern.png);
+    background-color: rgba(0, 89, 99, 1);
+    background-size: cover;
+    height: 100vh;
+}
