@@ -12,7 +12,7 @@ const ServiceDetail = () => {
     useEffect(() => {
         const foundService = services?.find(service => service.id === parseInt(serviceId));
         setService(foundService);
-    }, [services]);
+    }, [serviceId, services]);
 
     return (
         <div className="w-75 mx-auto my-5">
